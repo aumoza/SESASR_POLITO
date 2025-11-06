@@ -104,10 +104,10 @@ class Controller_Burger(Node):
     def move_straight(self):
         twist = Twist()
         twist.linear.x = self.max_linear_velocity
-        self.centring()
         twist.angular.z = 0.0
         self.publisher_.publish(twist)
         self.get_logger().info(f"Moving straight with linear velocity {self.max_linear_velocity} m/s")
+        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
 
     # Turn LEFT method
     def turn_left(self):
