@@ -14,7 +14,7 @@ class Controller_Burger(Node):
     def __init__(self):
         # Initialize the node
         super().__init__('controller_burger')
-        self.get_logger().info('Controller_burger node has been started.')
+        self.get_logger().info('Contrssh students@192.168.10.1XXssh students@192.168.10.1XXoller_burger node has been started.')
         
         # Create publishers and subscribers
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
